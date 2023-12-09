@@ -1,3 +1,5 @@
 [submodule "app/src/main/cpp/nettle/nettle"]
 	path = app/src/main/cpp/nettle/nettle
 	url = https://github.com/Ehviewer-Overhauled/nettle
+[submodule "./app/src/main/cpp/nettle/nettle"]
+	url = git@github.com:gnutls/nettle.git
