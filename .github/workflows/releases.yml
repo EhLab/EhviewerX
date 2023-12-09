@@ -5,8 +5,13 @@ on:
     tags:
       - "*"
 
+env:
+  SENTRY_ORG: ${{secrets.SENTRY_ORG}}
+  SENTRY_PROJECT_NAME: ${{secrets.SENTRY_PROJECT_NAME}}
+  SENTRY_AUTH_TOKEN: ${{secrets.SENTRY_AUTH_TOKEN}}
+
 jobs:
-  linux:
+  build:
     name: Build
     runs-on: ubuntu-latest
     steps:
