@@ -18,6 +18,8 @@
 -keep class com.hippo.ehviewer.client.parser.Limits { *; }
 -keep class com.hippo.ehviewer.client.data.BaseGalleryInfo { *; }
 
+-dontwarn androidx.compose.runtime.SnapshotFloatStateKt
+
 # Ktor logger
 -dontwarn org.slf4j.impl.StaticLoggerBinder
 

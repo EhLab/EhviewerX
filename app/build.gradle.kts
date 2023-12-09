@@ -167,11 +167,11 @@ android {
 
 dependencies {
     // https://developer.android.com/jetpack/androidx/releases/activity
-    implementation("androidx.activity:activity-compose:1.8.0-beta01")
+    implementation("androidx.activity:activity-compose:1.8.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("androidx.biometric:biometric-ktx:1.2.0-alpha05")
-    implementation("androidx.browser:browser:1.6.0")
-    implementation("androidx.collection:collection-ktx:1.3.0-beta01")
+    implementation("androidx.browser:browser:1.7.0")
+    implementation("androidx.collection:collection-ktx:1.3.0")
 
     // https://developer.android.com/jetpack/androidx/releases/compose-material3
     // api(platform("androidx.compose:compose-bom:2023.05.00"))
@@ -181,42 +181,42 @@ dependencies {
     implementation("androidx.compose.material3:material3-window-size-class")
     implementation("androidx.compose.ui:ui-util")
 
-    implementation("androidx.core:core-ktx:1.12.0-rc01")
+    implementation("androidx.core:core-ktx:1.12.0")
 
-    implementation("androidx.constraintlayout:constraintlayout-compose:1.1.0-alpha12")
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.1.0-alpha13")
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
-    implementation("androidx.fragment:fragment-ktx:1.7.0-alpha03")
+    implementation("androidx.fragment:fragment-ktx:1.7.0-alpha07")
     // https://developer.android.com/jetpack/androidx/releases/lifecycle
-    implementation("androidx.lifecycle:lifecycle-process:2.6.1")
+    implementation("androidx.lifecycle:lifecycle-process:2.6.2")
 
     // https://developer.android.com/jetpack/androidx/releases/navigation
-    val nav_version = "2.7.1"
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-compose:$nav_version")
+    val navVersion = "2.7.5"
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-compose:$navVersion")
 
     // https://developer.android.com/jetpack/androidx/releases/paging
-    val paging = "3.2.0"
+    val paging = "3.2.1"
     implementation("androidx.paging:paging-compose:$paging")
     implementation("androidx.paging:paging-runtime-ktx:$paging")
-    implementation("androidx.recyclerview:recyclerview:1.3.1")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.recyclerview:recyclerview-selection:1.2.0-alpha01")
 
     // https://developer.android.com/jetpack/androidx/releases/room
-    val room_version = "2.6.0-beta01"
-    ksp("androidx.room:room-compiler:$room_version")
-    implementation("androidx.room:room-paging:$room_version")
+    val roomVersion = "2.6.1"
+    ksp("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-paging:$roomVersion")
 
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01")
-    implementation("androidx.work:work-runtime-ktx:2.8.1")
+    implementation("androidx.work:work-runtime-ktx:2.9.0")
     implementation("com.drakeet.drawer:drawer:1.0.3")
     implementation("com.github.chrisbanes:PhotoView:2.3.0") // Dead Dependency
     implementation("com.github.tachiyomiorg:DirectionalViewPager:1.0.0") // Dead Dependency
     // https://github.com/google/accompanist/releases
-    val accompanist_version = "0.32.0"
-    implementation("com.google.accompanist:accompanist-themeadapter-material3:$accompanist_version")
-    implementation("com.google.accompanist:accompanist-webview:$accompanist_version")
-    implementation("com.google.android.material:material:1.11.0-alpha02")
+    val accompanistVersion = "0.32.0"
+    implementation("com.google.accompanist:accompanist-themeadapter-material3:$accompanistVersion")
+    implementation("com.google.accompanist:accompanist-webview:$accompanistVersion")
+    implementation("com.google.android.material:material:1.11.0-rc01")
 
     val splitties = "3.0.0"
     implementation("com.louiscad.splitties:splitties-appctx:$splitties")
