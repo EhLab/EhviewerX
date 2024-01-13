@@ -1,8 +1,10 @@
 import com.mikepenz.aboutlibraries.plugin.DuplicateMode.MERGE
 import com.mikepenz.aboutlibraries.plugin.DuplicateRule.GROUP
+import io.sentry.android.gradle.extensions.InstrumentationFeature
 import java.time.Instant
 import java.time.ZoneOffset
 import java.time.format.DateTimeFormatter
+import java.util.EnumSet
 
 val isRelease: Boolean
     get() = gradle.startParameter.taskNames.any { it.contains("Release") }
@@ -16,6 +18,7 @@ plugins {
     id("com.mikepenz.aboutlibraries.plugin")
     id("org.mozilla.rust-android-gradle.rust-android")
     id("dev.shreyaspatil.compose-compiler-report-generator")
+    id("io.sentry.android.gradle") version "4.1.1"
 }
 
 android {
@@ -163,6 +166,21 @@ android {
     }
 
     namespace = "com.hippo.ehviewer"
+}
+
+sentry {
+    includeNativeSources.set(true)
+    includeSourceContext.set(true)
+    uploadNativeSymbols.set(true)
+    additionalSourceDirsForSourceContext.set(setOf())
+
+    org.set(System.getenv("SENTRY_ORG"))
+    projectName.set(System.getenv("SENTRY_PROJECT_NAME"))
+    authToken.set(System.getenv("SENTRY_AUTH_TOKEN"))
+    tracingInstrumentation {
+        enabled.set(true)
+        features.set(EnumSet.allOf(InstrumentationFeature::class.java) - InstrumentationFeature.DATABASE)
+    }
 }
 
 dependencies {
