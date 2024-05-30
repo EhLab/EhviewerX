@@ -20,7 +20,7 @@
 	// "forwardPorts": [],
 
 	"onCreateCommand": {
-		"install-ndk": "sudo ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install \"ndk;26.1.10909125\" --channel=1 --sdk_root=${ANDROID_SDK_ROOT}",
+		"install-ndk": "sudo ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install \"ndk;26.0.10404224\" --channel=1 --sdk_root=${ANDROID_SDK_ROOT}",
 		"install-rust": "rustup update && rustup target add armv7-linux-androideabi aarch64-linux-android i686-linux-android x86_64-linux-android && rustup component add rustfmt clippy",
 		"python-is-python3": "sudo apt install python-is-python3"
 	},
